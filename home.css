@@ -1,0 +1,130 @@
+
+html {
+    font-size: 30px;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    background: #37098f;
+    perspective: 1000px;
+    overflow: hidden;
+}
+#canvas,
+#text {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#text {
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 8vmin;
+  display: none;
+}
+
+#text h1 {
+  opacity: 0.9;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    -webkit-animation: buttonsAnimation 2.4s ease-in-out infinite alternate;
+            animation: buttonsAnimation 2.4s ease-in-out infinite alternate;
+  }
+  
+  .button {
+    position: relative;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FF007D;
+    background-color: rgba(255, 0, 125, 0.25);
+    border: 2px solid #FF007D;
+    border-radius: 0.5rem;
+    transition: all 0.5s;
+    perspective: 100px;
+    -webkit-animation: buttonAnimation 2.4s ease-in-out infinite alternate;
+            animation: buttonAnimation 2.4s ease-in-out infinite alternate;
+  }
+  .button::before, .button::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: -2px;
+    background-color: rgba(255, 0, 125, 0.1);
+    border: 2px solid #FF007D;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+  }
+  .button::before {
+    z-index: 2;
+  }
+  .button::after {
+    z-index: 3;
+  }
+  .button:hover {
+    background-color: rgba(255, 0, 125, 0.5);
+  }
+  .button:hover::before {
+    transform: translateZ(6px);
+  }
+  .button:hover::after {
+    transform: translateZ(12px);
+  }
+  
+  @keyframes buttonAnimation {
+    0% {
+      perspective-origin: bottom right;
+    }
+    100% {
+      perspective-origin: top left;
+    }
+  }
+  
+  @keyframes buttonAnimation {
+    0% {
+      perspective-origin: bottom right;
+    }
+    100% {
+      perspective-origin: top left;
+    }
+  }
+  @keyframes buttonsAnimation {
+    0% {
+      transform: rotateY(-25deg) rotateX(6.25deg);
+    }
+    100% {
+      transform: rotateY(25deg) rotateX(-6.25deg);
+    }
+  }
+  @keyframes buttonsAnimation {
+    0% {
+      transform: rotateY(-25deg) rotateX(6.25deg);
+    }
+    100% {
+      transform: rotateY(25deg) rotateX(-6.25deg);
+    }
+  }

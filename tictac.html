@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="icon" href="images/logo.png">
+    <title id="page-title">Tic Tac Toe Game</title>
+    <!-- Google Font(s) Import -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,400italic,700,900,700italic,900italic|Open+Sans:400,300,300italic,400italic,600,600italic,700italic,800,700,800italic|Julius+Sans+One'
+          rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+
+    <!-- CSS CDN's -->
+<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css">
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="tictac.css"/>
+    <script src="tictac.js"></script>
+</head>
+<body>
+    <a href="index.html"><button class="rules-btn2" tabindex="1">Back</button></a>
+    <div
+     class="container flex-column-flow flex-column-valign-center flex-column-halign-center">
+    <div id="place-holder" class="all-margin-auto fit ">
+        <div id="inner-canvas" class="fit ">
+            <div id="make-choice" class="choice-bar hide">
+                <div id="descr-choice" class="bck-darkened fadeInDown animated">
+                    <p class="txt-center-xy white-txt txt-p">Choose your pawn</p>
+                    <p class="txt-center-xy white-txt txt-p">( <i class="fa fa-times black-txt"></i> starts first )</p>
+                </div>
+                <ul id="choice-btnz">
+                    <li>
+                        <span>
+                            <div id="select-cross" class="allow btn jumbo bg-white black-txt txt-center-xy">
+                                <i class="fa fa-times "></i>
+                            </div>
+                        </span>
+                        <span>
+                            <div id="select-circle" class="allow btn jumbo  bg-white red-txt  txt-center-xy">
+                                <i class="fa fa-circle-o"></i>
+                            </div>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div id="game" class="hide">
+                <div id="model"  class="model-show" ></div>
+             
+                <div id="game-header" class="bck-darkened user-select-none ">
+                    <ul>
+                        <li>
+                        <span>
+                        <div class="fit txt-center-xy white-txt header-btn"><i class="fa fa-user"></i> You</div>
+                        </span>
+                        <span>
+                            <div class="fit header-btn  txt-center-xy white-txt "><i class="fa fa-hand-peace-o"></i> Tie</div>
+                        </span>
+                        <span>
+                            <div class="fit header-btn  txt-center-xy white-txt "><i class="fa fa-laptop"></i> A.I.</div>
+                        </span>
+                        </li>
+                        <li>
+                        <span>
+                            <div id="human-score" class=" header-btn-sm fit  txt-center-xy white-txt"><i class="fa fa-trophy "></i> 907</div>
+                        </span>
+                        <span>
+                            <div id="tie-score" class="header-btn-sm fit  txt-center-xy white-txt">04</div>
+                        </span>
+                        <span>
+                            <div id="ai-score" class="header-btn-sm fit  txt-center-xy white-txt"><i class="fa-trophy fa"></i> 24</div>
+                        </span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="game-grid" class="">
+                    <ul>
+                        <li style="white-space: nowrap;">
+                        <span>
+                            <div id="cell0" class="allow btn s-jumbo bg-white txt-center-xy fa fa-circle-o red-txt"></div>
+                        </span>
+                        <span>
+                            <div id="cell1" class="allow btn s-jumbo bg-white black-txt txt-center-xy"></div>
+                        </span>
+                        <span>
+                            <div id="cell2" class="allow btn s-jumbo bg-white black-txt txt-center-xy"></div>
+                        </span>
+                        </li>
+                        <li>
+                        <span>
+                            <div id="cell3" class="btn s-jumbo bg-white black-txt txt-center-xy">
+                            </div>
+                        </span>
+                        <span>
+                            <div id="cell4" class="btn s-jumbo bg-white black-txt txt-center-xy"></div>
+                        </span>
+                        <span>
+                            <div id="cell5" class="btn s-jumbo bg-white black-txt txt-center-xy"></div>
+                        </span>
+                        </li>
+                        <li>
+                       <span>
+                           <div id="cell6" class="btn s-jumbo bg-white black-txt txt-center-xy"></div>
+                       </span>
+                        <span>
+                            <div id="cell7" class="btn s-jumbo bg-white black-txt txt-center-xy"></div>
+                        </span>
+                        <span>
+                            <div id="cell8" class="btn s-jumbo bg-white black-txt txt-center-xy"></div>
+                        </span>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- game -->
+        </div><!-- inner-canvas -->
+    </div><!-- place holder -->
+</div><!-- container -->
+<div id="modal-canvas" class="modal-overlay modal-canvas">
+    <div class="container flex-column-flow flex-column-valign-center flex-column-halign-center">
+        <div class="all-margin-auto fit">
+            <div id="dialog" class="xx usr dialog bg-white black-txt fit user-select-none">
+                <div class="dlg-header txt-center-xy">
+                    <p class="medium usr-display"><i class="fa fa-user"></i>&nbsp;You have won!</p>
+                    <p class="medium ai-display"><i class="fa fa-laptop"></i>&nbsp;A.I. has won</p>
+                    <p class="medium tie-display"><i class="fa fa-flag-o"></i>&nbsp;It is a Tie</p>
+                </div>
+                <div class="dlg-body txt-center-xy">
+                    <p class="medium">Your Pawn Is Now:</p>
+                    <p class="o-disp jumbo red-txt"><i class="fa fa-circle-o "></i></p>
+                    <p class="x-disp jumbo black-txt"><i class="fa fa-times "></i></p>
+                </div>
+                <div class="dlg-btn-bar txt-center-xy">
+                    <a id="next" class="dlg-button txt-center-xy fit">
+                        <span class="medium ">
+                            <i class="fa fa-gamepad"></i>
+                                &nbsp;Next&nbsp;Game!
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="backdrop" class="modal-overlay backdrop fade" ></div>
+</html>

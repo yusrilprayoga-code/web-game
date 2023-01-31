@@ -1,0 +1,222 @@
+/*main css, opening game, default layout*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Righteous;
+}
+
+body{
+    max-height: 600px;
+}
+.instructions{
+  text-align:center;
+  margin-top: 10px;
+}
+
+canvas{
+    border: 2px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+
+@keyframes hide{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+/*starting a game div */
+.start-div{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    z-index: 2;
+}
+
+h1 {
+    cursor: default;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50%;
+    top: 35%;
+    flex-direction: column;
+    margin: auto;
+    display: block;
+    text-align: center;
+    letter-spacing: 0;
+  }
+  
+  h1 span {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    flex-direction: column;
+    animation: bounce 0.3s ease infinite alternate;
+    font-size: 80px;
+    color: rgb(38, 95, 16);
+    text-shadow: 0 1px 0 rgb(8, 8, 8), 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+      0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  h1 span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  h1 span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  h1 span:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  
+  h1 span:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  
+  h1 span:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  
+  h1 span:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  
+  h1 span:nth-child(8) {
+    animation-delay: 0.2s;
+  }
+  
+  h1 span:nth-child(9) {
+    animation-delay: 0.3s;
+  }
+  
+  h1 span:nth-child(10) {
+    animation-delay: 0.4s;
+  }
+  
+  h1 span:nth-child(11) {
+    animation-delay: 0.5s;
+  }
+  
+  h1 span:nth-child(12) {
+    animation-delay: 0.6s;
+  }
+  
+  h1 span:nth-child(13) {
+    animation-delay: 0.7s;
+  }
+  
+  h1 span:nth-child(14) {
+    animation-delay: 0.8s;
+  }
+  
+  /* ANIMATION */
+  @keyframes bounce {
+    100% {
+      top: -20px;
+      text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+        0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+        0 50px 25px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+.start-div h2{
+    display: inline-block;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 20px 40px;
+    font-size: 200%;
+    background-color:transparent;
+    align-self: center;
+    transition: ease .40s;
+}
+.start-div h2:hover{
+    letter-spacing: 3;
+    color: rgb(28, 102, 50);
+    background-color:rgb(99, 199, 104);
+    transform: scale(1.1);
+}
+.start-div.hidden{
+    animation-name: hide;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.setting {
+    right: 100%;
+}
+#c-animate {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("") no-repeat center center;
+    background: linear-gradient(-45deg, #5ff867b7, #63e0b79c, #1a5508);
+    background-size: 400% 400%;
+    animation: animate 15s ease infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .c-background__content {
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -weabkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+  }
+
+  .rules-btn2 {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    outline: none;
+    border: 2px solid #000;
+    border-radius: 0.6rem;
+    color: #000;
+    padding: 0.6rem 2.5rem;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+  }
+  .rules-btn2:focus {
+    border: 2px solid #fff;
+  }
+  
+  .rules-btn2:hover {
+    transform: scale(1.1);
+  }
+
+  

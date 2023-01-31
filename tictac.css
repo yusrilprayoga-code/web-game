@@ -1,0 +1,562 @@
+
+
+/**
+ ___   ___  _ _  ___  ___  _  ___   ___  ___  _ _  _    _  _ _  ___
+/  _> | __>| \ || __>| . \| ||  _> / __>|_ _|| | || |  | || \ |/  _>
+| <_/\| _> |   || _> |   /| || <__ \__ \ | | \   /| |_ | ||   || <_/\
+`____/|___>|_\_||___>|_\_\|_|`___/ <___/ |_|  |_| |___||_||_\_|`____/
+
+*/
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+/* stop that crazy shit */
+/* stop that crazy shit */
+/* stop that crazy shit */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, a, form, fieldset, input[type="search"], textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+input:focus, textarea:focus, keygen:focus, select:focus {
+    outline-offset: -2px;
+}
+
+div:before, select, * {
+    box-sizing: border-box;
+}
+
+button, input {
+    line-height: normal;
+}
+
+html,
+body {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    line-height: 1;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+}
+
+/* FLEX-BOX STUFF AND OTHER ALIGNMENT STUFF */
+
+.flex-column-flow {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.flex-row-flow {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: flex;
+    flex-direction: row;
+
+}
+
+.flex-column-halign-center {
+
+    align-items: center;
+
+}
+
+.flex-column-valign-center {
+
+    justify-content: center;
+    height: 100%;
+
+}
+
+.flex-stretch {
+    align-items:stretch;
+}
+
+.h-center {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.user-select-none {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.fit {
+
+    width: -moz-fit-content;
+    width: fit-content;
+
+}
+
+.all-margin-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* MARKING ELEMENTS */
+
+/* debug markers */
+/* debug markers */
+/* debug markers */
+.debug-white {
+    border: 1px white solid;
+}
+
+.debug-black {
+    border: 1px solid black;
+}
+
+.debug-red {
+    border: 1px solid red;
+}
+
+.debug-blue {
+    border: 1px solid blue;
+}
+
+.outline-r {
+    outline: 1px solid red;
+}
+
+.outline-g {
+    outline: 1px solid green;
+}
+
+.outline-b {
+    outline: 1px solid blue;
+}
+
+/*general decoration*/
+/*general decoration*/
+/*general decoration*/
+
+.rounded {
+    border-radius: 1rem;
+}
+
+.bck-w {
+    background-color: white !important;
+}
+
+.ncursor {
+    cursor: unset !important;
+}
+
+.dcursor {
+    cursor: default !important;
+}
+
+.p-small {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/** buttons */
+/** buttons */
+/** buttons */
+
+.j-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+
+/*
+ ___  ___  ___  _    _  ___  ___  ___  _  ___  _ _
+| . || . \| . \| |  | ||  _>| . ||_ _|| || . || \ |
+|   ||  _/|  _/| |_ | || <__|   | | | | || | ||   |
+|_|_||_|  |_|  |___||_|`___/|_|_| |_| |_|`___'|_\_|
+
+*/
+
+/*elements*/
+/*elements*/
+/*elements*/
+body {
+    background: linear-gradient(#7FB1C9,#A570CC);
+    font-family: 'Open Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+}
+
+ul {
+    display:table;
+    table-layout: fixed;
+    max-width:320px;
+    width:100%;
+}
+
+li {
+    display:table-row;
+    white-space: nowrap;
+
+}
+
+ul li > span   {
+    display: table-cell;
+}
+
+/*generic classes */
+/*generic classes */
+/*generic classes */
+
+.s-jumbo {
+    font-size:5.4em !important;
+}
+
+.jumbo {
+    font-size: 4em !important;
+}
+
+.large {
+    font-size:2em;
+}
+
+.medium {
+    font-size:1.2em;
+}
+
+.btn {
+    position:relative;
+    display: inline-block;
+
+    /*width:1em;
+    height:1em;*/
+
+    width:1em;
+    height:1em;
+
+    border-radius: 5px;
+    box-shadow: 2px 5px 8px rgba(0,0,0,.2);
+
+    -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin: 0.125em;
+}
+
+.btn::after {
+    content: "";
+    border-radius: 5px;
+    position: absolute;
+
+    /* z-index: -1;*/
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.clickable .btn.allow:hover {
+
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.25, 1.25);
+
+}
+
+.clickable .btn.allow:hover::after {
+    opacity: 1;
+}
+
+.bck-darkened {
+
+    background-color:rgba(0,0,0,  0.2);
+    border-radius: 5px;
+    padding: calc( 2* 0.125em ) 0em;
+    box-shadow: 2px 5px 8px rgba(0,0,0,.2);
+
+    /*opacity: 0.5;*/
+
+}
+
+.inverted {
+
+    background-color: white;
+    color:black !important;
+}
+
+
+.header-btn {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left:0.5em;
+    padding-right:0.5em;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 4px;
+}
+
+.header-btn-sm {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left:0.25em;
+    padding-right:0.25em;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 2px;
+}
+
+.txt-center-xy {
+
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.txt-p {
+
+    padding-bottom:0.25em;
+    padding-top:0.25em;
+
+}
+
+.bg-white {
+
+    background-color: white;
+
+}
+
+.red-txt {
+    color:red;
+}
+
+.black-txt {
+    color:black;
+}
+
+.white-txt {
+    color:white;
+}
+
+.choice-bar {
+    max-width: 10rem;
+}
+
+/* specific elements */
+/* specific elements */
+/* specific elements */
+
+#header > ul li > span {
+    padding-top: 0.0em;
+    padding-bottom: 0.0em;
+    padding-left: 0.0em;
+    padding-right: 0.0em;
+}
+
+#game-header > ul li > span {
+    align-items: center;
+    display: table-cell;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+/* button in #game-header */
+
+#game-grid > ul li > span {
+    padding: 0em 0em;
+    /*border:1px green solid;*/
+}
+
+ul#choice-btnz li > span {
+    width:50%;
+}
+
+#descr-choice {
+
+    margin: 0em calc( 4* 0.125em );
+
+}
+
+/* for modal dark dialog background */
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+}
+
+.backdrop {
+    z-index:-1;
+    background-color:#000;
+    opacity:0;
+}
+
+.backdrop.in {
+    z-index: 99; /* backdrop above everything else */
+    opacity:0.5 !important;
+}
+
+.modal-canvas {
+    z-index:-1; /* not visible*/
+    opacity:0;
+}
+
+.modal-canvas.in {
+    z-index:102; /* above the backdrop*/
+    opacity:1;
+}
+
+
+.show {
+    display:block !important;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.dialog {
+    font-family:Raleway;
+    border-radius: 5px;
+}
+
+.dialog * {
+    cursor:default;
+}
+
+
+.dlg-header {
+    padding: 1em 1em 0.25em 1em;
+    font-weight:bold;
+}
+
+.dlg-btn-bar {
+    padding: 0.5em 1em 1em 1em;
+}
+
+.dlg-body {
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.dlg-button, .dlg-button:hover, .dlg-button:focus, .dlg-button:active {
+    text-decoration: none;
+    outline:none;
+}
+.dlg-button, .dlg-button * {
+    cursor:pointer;
+}
+
+
+.dlg-button {
+    background: #F0F0F0;
+    padding: 10px 12px;
+    border-radius: 2px;
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+    display:inline-block;
+}
+
+.dlg-button:active {
+    background-color: #333;
+    color: #F0F0F0;
+}
+
+.usr-display , .ai-display, .tie-display {
+    display:none;
+}
+
+.usr .usr-display , .ai .ai-display, .tie .tie-display {
+    display:inline-block !important;
+}
+
+.o-disp, .x-disp {
+  display:none;
+}
+
+.oo .o-disp , .xx .x-disp {
+  display: inline-block !important;
+}
+.rules-btn2 {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    outline: none;
+    border: 2px solid #000;
+    border-radius: 0.6rem;
+    color: #000;
+    padding: 0.6rem 2.5rem;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+  }
+  .rules-btn2:focus {
+    border: 2px solid #fff;
+  }
+  
+  .rules-btn2:hover {
+    transform: scale(1.1);
+  }
+
+
+
+
+
